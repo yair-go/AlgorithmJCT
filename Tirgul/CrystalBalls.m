@@ -1,11 +1,9 @@
 function [ C,t ] = CrystalBalls( n,k )
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+%  Crystal Balls Problem, Dynamic programming O(n^2*k)
 
 C = zeros(k,n);
 C(1,:) = 1:n;
 C(:,1)=1;
-t=1;
 for i=2:k
     for j=2:n
         F = calcF(C,i,j);
